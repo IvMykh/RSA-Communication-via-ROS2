@@ -55,7 +55,7 @@ flowchart LR
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/<your-username>/<this-repo>.git
+git clone https://github.com/<your-username>/RSA-Communication-via-ROS2.git
 
 cd ~/ros2_ws
 rosdep install --from-paths src --ignore-src -y
@@ -115,15 +115,19 @@ For production ROS 2 systems, see [SROS2 / DDS Security](https://docs.ros.org/en
 ## Project structure
 
 ```
-rsa_demo_cpp/
+RSA-Communication-via-ROS2/   # the ROS 2 package rsa_demo_cpp
+├── CMakeLists.txt
+├── package.xml
 ├── include/rsa_demo_cpp/
 │   └── crypto_utils.hpp      # RSA, Base64, SHA-256 and tiny JSON helpers
-└── src/
-    ├── crypto_utils.cpp      # OpenSSL EVP implementation
-    ├── key_directory_node.cpp
-    ├── alice_node.cpp
-    ├── bob_node.cpp
-    └── eve_node.cpp
+├── src/
+│   ├── crypto_utils.cpp      # OpenSSL EVP implementation
+│   ├── key_directory_node.cpp
+│   ├── alice_node.cpp
+│   ├── bob_node.cpp
+│   └── eve_node.cpp
+├── LICENSE
+└── README.md
 ```
 
 ## License
